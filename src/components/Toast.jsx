@@ -1,0 +1,4 @@
+export default function Toast({ toast, onClose }) {
+  if (!toast) return null;
+  return <div className={`toast ${toast.type || "error"}`} onClick={onClose}>{toast.message}</div>;
+}
